@@ -1,1 +1,3 @@
 Vai privet bratishka!
+
+print
