@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 TOKEN = "7540140019:AAG7heZuusDAw-P9NQoukiRvQjKkIzbpbWw"
-bot = telebot.Telebot(TOKEN)
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands = ["start"])
 def start(msg):
@@ -10,6 +10,6 @@ def start(msg):
     mrk.add()
     bot.send_message(
         msg.chat.id,
-        "Привет! Я бот, в котором ты можешь выбрать фильм на любой вкус! /n /n Выбирай жанр ниже 👇"
+        "Привет! Я бот, в котором ты можешь выбрать фильм на любой вкус! /n /n Выбирай жанр ниже 👇",
         reply_markup=mrk
     )
