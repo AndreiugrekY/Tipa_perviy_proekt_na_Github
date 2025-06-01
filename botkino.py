@@ -7,7 +7,12 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands = ["start"])
 def start(msg):
     mrk = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 2)
-    mrk.add()
+    boevik = types.KeyboardButton("🔫 Боевик")
+    komedia = types.KeyboardButton("🤣 Комедия")
+    fantastika = types.KeyboardButton("👽 Фантастика")
+    yjasi = types.KeyboardButton("👻 Ужасы")
+    restart = types.KeyboardButton("🤖 Перезапустить бота")
+    mrk.add(boevik, komedia, fantastika, yjasi, restart)
     bot.send_message(
         msg.chat.id,
         "Привет! Я бот, в котором ты можешь выбрать фильм на любой вкус! /n /n Выбирай жанр ниже 👇",
