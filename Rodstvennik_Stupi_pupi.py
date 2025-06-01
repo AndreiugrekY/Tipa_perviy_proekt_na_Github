@@ -1,3 +1,3 @@
-Vai privet bratishka!
 
-print
+
+print("hello")
