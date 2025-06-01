@@ -27,28 +27,28 @@ def start(msg):
 
 @bot.message_handler(content_types = ["text"])
 def buttons(msg):
-    film_b = random.choice()
+    film_b = random.choice(mas_boevik)
     if msg.text == "🔫 Боевик":
         bot.send_message(
             msg.chat.id,
             f"Предлагаю посмотреть фильм", film_b, "жанра Боевик"
         )
 
-    film_k = random.choice()
+    film_k = random.choice(mas_komedi)
     if msg.text == "🤣 Комедия":
         bot.send_message(
             msg.chat.id,
             f"Предлагаю посмотреть фильм", film_k, "жанра Комедия"
         )
 
-    film_f = random.choice()
+    film_f = random.choice(mas_sci_fi)
     if msg.text == "👽 Фантастика":
         bot.send_message(
             msg.chat.id,
             f"Предлагаю посмотреть фильм", film_f, "жанра Фантастика"
         )
 
-    film_y = random.choice()
+    film_y = random.choice(mas_uhzas)
     if msg.text == "👻 Ужасы":
         bot.send_message(
             msg.chat.id,
